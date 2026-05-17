@@ -1,0 +1,762 @@
+body{
+margin:0;
+padding:0;
+background:#0a0a0a;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+#particles-js{
+display:none;
+}
+
+header{
+padding:120px 20px;
+}
+
+h1{
+font-size:60px;
+color:#ff3300;
+text-shadow:0 0 10px orange;
+}
+
+h2{
+0 0 8px orange
+0 0 10px #ff6600
+}
+
+p{
+font-size:22px;
+line-height:45px;
+padding:10px;
+}
+
+button{
+background:linear-gradient(45deg,#ff0000,#ff9900);
+border:none;
+padding:18px 40px;
+font-size:24px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+box-shadow:0 0 30px orange;
+margin:15px;
+transition:0.3s;
+animation:pulse 1.5s infinite;
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 40px red;
+}
+
+.box{
+background:rgba(255,80,0,0.08);
+margin:25px auto;
+width:85%;
+max-width:650px;
+padding:25px;
+text-align:center;
+border-radius:25px;
+box-shadow:0 0 10px rgba(255,140,0,0.4);
+}
+
+ul{
+list-style:none;
+padding:0;
+font-size:28px;
+line-height:75px;
+text-align:left;
+}
+
+.games-title{
+font-size:45px;
+color:orange;
+text-shadow:0 0 8px orange;
+margin-top:50px;
+}
+
+.games-list{
+padding:10px;
+background:rgba(0,0,0,0.25);
+border-radius:20px;
+}
+
+footer{
+padding:40px;
+font-size:25px;
+color:white;
+}
+
+.ticker-wrap{
+width:100%;
+overflow:hidden;
+background:#111;
+padding:18px 0;
+border-top:3px solid orange;
+border-bottom:3px solid orange;
+box-shadow:0 0 20px orange;
+margin-top:40px;
+margin-bottom:40px;
+}
+
+.ticker{
+display:inline-block;
+white-space:nowrap;
+animation:ticker 18s linear infinite;
+font-size:34px;
+font-weight:bold;
+color:white;
+}
+
+@keyframes ticker{
+0%{
+transform:translateX(100%);
+}
+100%{
+transform:translateX(-100%);
+}
+}
+
+.messenger-float{
+position:fixed;
+bottom:100px;
+right:20px;
+width:78px;
+height:78px;
+background:linear-gradient(45deg,#ff2a00,#ff9900);
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:38px;
+text-decoration:none;
+color:white;
+z-index:99999;
+box-shadow:
+0 0 10px #ff6600,
+0 0 25px orange,
+0 0 45px red;
+animation:chatGlow 1.5s infinite alternate;
+}
+
+.vip-box{
+background:black;
+margin:40px auto;
+width:85%;
+max-width:550px;
+padding:30px;
+border-radius:35px;
+box-shadow:0 0 35px orange;
+}
+
+.vip-box h2{
+font-size:50px;
+}
+
+.vip-box p{
+font-size:30px;
+font-weight:bold;
+text-shadow:0 0 15px orange;
+}
+
+@keyframes glow{
+0%{
+box-shadow:0 0 10px red;
+}
+100%{
+box-shadow:0 0 40px orange;
+}
+}
+
+@keyframes chatGlow{
+0%{
+box-shadow:
+0 0 10px #ff6600,
+0 0 25px orange;
+transform:scale(1);
+}
+100%{
+box-shadow:
+0 0 20px #ff3300,
+0 0 40px orange,
+0 0 60px red;
+transform:scale(1.08);
+}
+}
+.logo{
+width:160px;
+height:160px;
+object-fit:contain;
+margin-bottom:20px;
+filter:drop-shadow(0 0 25px orange);
+animation:floatPulse 2s infinite alternate;
+}
+.logo{
+width:180px;
+margin-top:40px;
+margin-bottom:20px;
+filter:drop-shadow(0 0 25px orange);
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+}
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999999;
+animation:fadeOut 2s forwards;
+animation-delay:2.5s;
+}
+
+.loader-logo{
+width:160px;
+border-radius:20px;
+box-shadow:0 0 40px orange;
+animation:
+spin 3s linear infinite,
+pulse 2s infinite;
+}
+
+#loader h1{
+color:#ff6600;
+font-size:45px;
+margin-top:20px;
+text-shadow:0 0 20px orange;
+}
+
+#loader p{
+color:white;
+font-size:25px;
+letter-spacing:5px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0.3;}
+100%{opacity:1;}
+}
+
+@keyframes floatLogo{
+0%{
+transform:translateY(0px);
+}
+100%{
+transform:translateY(-10px);
+}
+}
+
+@keyframes fadeOut{
+0%{
+opacity:1;
+visibility:visible;
+}
+
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+#loader{
+position: fixed;
+width:100%;
+height:100vh;
+background:black;
+z-index:9999;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+top:0;
+left:0;
+}
+
+.loader-logo{
+width:150px;
+animation:spin 2s linear infinite;
+}
+
+#loader h1{
+color:orange;
+font-size:30px;
+margin-top:20px;
+text-shadow:0 0 20px orange;
+}
+
+#loader p{
+color:white;
+margin-top:10px;
+letter-spacing:3px;
+}
+
+@keyframes spin{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+}
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+}
+@keyframes pulse{
+0%{
+transform:scale(1);
+box-shadow:0 0 20px orange;
+}
+
+50%{
+transform:scale(1.08);
+box-shadow:0 0 45px red;
+}
+
+100%{
+transform:scale(1);
+box-shadow:0 0 20px orange;
+}
+}
+#popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:rgba(0,0,0,0.85);
+color:white;
+padding:15px 25px;
+border-radius:15px;
+font-size:18px;
+z-index:99999;
+box-shadow:0 0 20px orange;
+border:2px solid orange;
+animation:popupGlow 1.5s infinite alternate;
+}
+
+@keyframes popupGlow{
+from{
+box-shadow:0 0 10px orange;
+}
+to{
+box-shadow:0 0 25px red;
+}
+}
+.promo-video{
+width:100%;
+max-width:420px;
+border-radius:25px;
+display:block;
+margin:auto;
+box-shadow:0 0 25px orange;
+object-fit:cover;
+}
+
+@keyframes videoGlow{
+0%{
+box-shadow:
+0 0 15px orange;
+}
+
+100%{
+box-shadow:
+0 0 35px red;
+}
+}
+.slider{
+position:relative;
+width:100%;
+aspect-ratio:1/1;
+overflow:hidden;
+border-radius:25px;
+margin-bottom:20px;
+}
+
+.slider{
+position:relative;
+width:100%;
+overflow:hidden;
+border-radius:25px;
+margin-bottom:20px;
+}
+
+.slide{
+width:100%;
+height:auto;
+object-fit:cover;
+border-radius:25px;
+display:block;
+}
+.casino-card{
+background: rgba(255,80,0,0.08);
+margin: 30px auto;
+padding: 25px;
+width: 85%;
+max-width: 500px;
+border-radius: 25px;
+box-shadow: 0 0 20px rgba(255,140,0,0.4);
+text-align: center;
+}
+
+.casino-card img{
+width: 250px;
+max-width: 90%;
+border-radius: 20px;
+margin-bottom: 20px;
+}
+
+.casino-card h2{
+font-size: 40px;
+color: white;
+margin-bottom: 20px;
+}
+
+.casino-card button{
+background: linear-gradient(to right,#ff3300,#ff9900);
+border: none;
+padding: 18px 40px;
+font-size: 30px;
+font-weight: bold;
+border-radius: 50px;
+color: white;
+box-shadow: 0 0 25px orange;
+}
+.floating-btn{
+position:fixed;
+bottom:25px;
+right:20px;
+background:linear-gradient(45deg,orange,red);
+color:white;
+padding:15px 25px;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 20px orange;
+z-index:9999;
+animation:floatGlow 1.5s infinite alternate;
+}
+
+@keyframes floatGlow{
+from{
+transform:scale(1);
+box-shadow:0 0 15px orange;
+}
+
+to{
+transform:scale(1.08);
+box-shadow:0 0 35px red;
+}
+}
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999999;
+animation:fadeOut 1s ease forwards;
+animation-delay:3s;
+}
+
+.loader-logo{
+width:180px;
+height:180px;
+border-radius:50%;
+box-shadow:
+0 0 25px orange,
+0 0 50px red;
+animation:spin 3s linear infinite;
+}
+
+#loader h1{
+margin-top:25px;
+font-size:32px;
+color:white;
+text-shadow:
+0 0 10px orange,
+0 0 20px red;
+font-weight:bold;
+letter-spacing:3px;
+}
+
+@keyframes spin{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+@keyframes fadeOut{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
+.money-rain{
+pointer-events:none;
+z-index:1;  
+position:fixed;
+top:-100px;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.money-rain span{
+position:absolute;
+top:-100px;
+font-size:35px;
+animation:moneyFall linear infinite;
+opacity:0.8;
+}
+
+.money-rain span:nth-child(1){
+left:5%;
+animation-duration:7s;
+}
+
+.money-rain span:nth-child(2){
+left:15%;
+animation-duration:9s;
+}
+
+.money-rain span:nth-child(3){
+left:28%;
+animation-duration:8s;
+}
+
+.money-rain span:nth-child(4){
+left:42%;
+animation-duration:6s;
+}
+
+.money-rain span:nth-child(5){
+left:58%;
+animation-duration:10s;
+}
+
+.money-rain span:nth-child(6){
+left:72%;
+animation-duration:7s;
+}
+
+.money-rain span:nth-child(7){
+left:85%;
+animation-duration:9s;
+}
+
+.money-rain span:nth-child(8){
+left:95%;
+animation-duration:8s;
+}
+
+@keyframes moneyFall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+.promo-card{
+animation:floatCard 2s ease-in-out infinite;
+transition:0.4s;
+}
+
+.promo-card:hover{
+transform:scale(1.03);
+box-shadow:
+0 0 20px orange,
+0 0 40px red;
+}
+
+@keyframes floatCard{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+}
+video{
+position:relative;
+z-index:5;
+border-radius:25px;
+}
+.slot-machine{
+
+background:#2b0b00;
+
+padding:30px;
+
+border-radius:30px;
+
+text-align:center;
+
+margin:40px auto;
+
+max-width:420px;
+
+box-shadow:
+0 0 20px orange,
+0 0 40px red;
+
+}
+
+.slot-machine h2{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+}
+color:white;
+
+font-size:35px;
+
+text-shadow:
+0 0 10px orange,
+0 0 20px red;
+
+margin-bottom:20px;
+
+}
+
+.slots{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+.slot{
+
+width:90px;
+
+height:90px;
+
+background:black;
+
+border:3px solid orange;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:50px;
+
+box-shadow:
+0 0 15px orange,
+0 0 30px red;
+
+animation:slotGlow 1s infinite alternate;
+}
+.slot{
+animation:slotSpin 0.2s linear infinite;
+}
+
+@keyframes slotSpin{
+0%{
+transform:rotateX(0deg);
+}
+
+100%{
+transform:rotateX(360deg);
+}
+}
+
+.slot-machine button{
+
+background:linear-gradient(45deg,red,orange);
+
+border:none;
+
+padding:15px 35px;
+
+border-radius:50px;
+
+font-size:22px;
+
+font-weight:bold;
+
+color:white;
+
+box-shadow:
+0 0 20px orange,
+0 0 40px red;
+
+}
+
+@keyframes slotGlow{
+
+from{
+
+box-shadow:
+0 0 10px orange;
+
+}
+
+to{
+
+box-shadow:
+0 0 30px red;
+
+}
+
+}
